@@ -1,4 +1,4 @@
-# FIN: TOML But Things
+# FIN: TOML But Better Nesting And Explicit Closing And Some More Extra Stuff™©® ® <sup><sup><sup>these symbols aren't legally valid btw just in case</sup></sup></sup>
 
 ## Called Fin
 No acronym there. 
