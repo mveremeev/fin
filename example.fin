@@ -1,0 +1,82 @@
+title = "a fin example"
+
+[Explicit-closing] {
+
+[.opening-nested-like-this] {
+    [.two] {
+        [.three] {
+} [3.] //this just closed the last three
+#oh, and two types of comments work
+
+[.another] {
+  
+  [.deeper] {
+
+} [.another] //also explicitly closed, and auto-closed [.deeper]
+
+  } [Explicit-closing]
+
+
+
+
+
+[whitespace] {doesnt="really"; matter     =  "with";
+the ="power"
+of="semi"; colons=";"} //and closing like this still works, like in JSON
+
+
+
+
+[it] {
+    uses="existing"; //TOML decoder code
+
+    [.and] {
+        so = "everything"; toml= {just="works, like ints, this, and dates"}
+        for=["example", 1, "like"]
+        this = -4.5
+        bool=true
+        dt = 1979-05-27T07:32:00-08:00
+        time = 14:30:00; arr = [1, 2, 3]
+      nested_array = [[1,2], [3,4]]
+    inline = { x = 1, y = 2 } //again, spacing doesnt matter :)
+        g= 78
+} [it] #closed both [it] and [.and] here
+
+
+
+[open] {
+    [.new] {
+
+[table-to-root] { //and the previous will implicitly auto-close
+
+
+
+[.b] {every-table="without a starting dot, goes to root" 
+
+[.c] {
+    [.d] {some="more nests"
+
+} [.] //all closed just like that
+
+
+
+
+[[array]] { of="tables" }
+[[array]] {still="works"}
+
+
+
+
+[a.b.c.d] {
+    opening="like this"
+    [.e.f.g.h] {
+        still="works"
+      } [..] #"explicit"/neater variant of a regular }, does the exact same
+  }
+
+
+
+
+[merged] { values = 1 } [.]
+[merged] { like-this = 2 } [.]   // result: {merged: {values: 1, like-this: 2}}
+//[merged] {values=1} is invalid, no duplicate values
