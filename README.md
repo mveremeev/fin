@@ -7,7 +7,7 @@ It literally uses the TOML decoder code but like adds stuff (https://github.com/
 
 
 ## State
-Still very much an alpha. You can see this in error messages, the lack of a serialiser, and the very amateurish input/output methods (made it easier to test but it's not good I'll say)
+Still very much an alpha. You can see this in error messages, the lack of a serialiser, and the very amateurish input/output methods (made it easier to test but it's not good I'll say). No linter and some things may be MOSTLY sensible but up to discussion ([.close] and [close] being valid but do different things).
 
 
 ## AI Use Disclaimer
