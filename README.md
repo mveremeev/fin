@@ -12,5 +12,7 @@ Still very much an alpha. You can see this in error messages, the lack of a seri
 
 ## AI Use Disclaimer
 Debugging obscure things/writing "example" fin files en masse for me to test against the decoder
+
 Helping with grammar stuff
+
 Helping me with license stuff
